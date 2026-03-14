@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: demo_spmvc
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/demo_spmvc?createDatabaseIfNotExist=true&useSSL=false&serverTimezone=UTC
+    username: root
+    password: 123456
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+
+app:
+  jwt:
+    # >= 32 chars
+    secret: change-me-change-me-change-me-change-me-123456
+    expiration-seconds: 3600
+
